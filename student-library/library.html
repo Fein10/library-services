@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Student Library Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"> Student Library</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="library.html" class="active">Library</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="results.html">My Results</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="library-container">
+        <div class="library-header">
+            <h1>Library Resources</h1>
+            <div class="search-filter-section">
+                <div class="search-box">
+                    <input type="text" id="librarySearch" placeholder="Search library...">
+                    <button onclick="searchLibrary()"> Search</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="books">Books</button>
+                    <button class="filter-btn" data-filter="articles">Articles</button>
+                    <button class="filter-btn" data-filter="topics">Topics</button>
+                    <button class="filter-btn" data-filter="papers">Past Papers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-content">
+            <div id="resultsCount" class="results-count"></div>
+            <div id="libraryResults" class="resource-grid">
+                <!-- Resources will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="resourceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Student Library Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="library.js"></script>
+</body>
+</html>
